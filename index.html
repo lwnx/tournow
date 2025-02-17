@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特色本地演出 - 发现最精彩的表演</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+</head>
+<body>
+    <!-- 页面加载动画 -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <span>加载中...</span>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://emojipedia.org/_next/image?url=https%3A%2F%2Fis.zobj.net%2Fimage-server%2Fv1%2Fimages%3Fr%3DoxXwzXINRmhsniM__u8yKMUDttJ3vbP9ERXqIAfuOAclKY99wIwpyLKw_p022Vm0CRReCcYPzmUllOcpo4LGVFvxzQcHQyv0BT2tKFiRgRN2Z2NeumbXALtvNT75wpyTi4yXheGoeGMJKwvPaWRVkFAT0kM9deDdLDBQxJ5Ae0oa8BSKhMaUjROY184ms7rw0ZRwZSliOJ35tJfze6fx0fLZe9ydUvRUtjWAeQuwekWApcnvFr8-3iMLXi8&w=256&q=75" alt="Logo">
+        </div>
+        <div class="navlinks">
+            <a class="navlink active" href="index.html" data-aos="fade-down" data-aos-delay="100">演出</a>
+            <a class="navlink" href="car.html" data-aos="fade-down" data-aos-delay="200">停车</a>
+            <a class="navlink" href="food.html" data-aos="fade-down" data-aos-delay="300">美食</a>
+        </div>
+    </nav>
+
+    <!-- 主标题 -->
+    <div class="hero-section">
+        <h1 class="brand" data-aos="fade-up">
+            热门<span>演出</span>
+        </h1>
+        <p class="subtitle" data-aos="fade-up" data-aos-delay="200">
+            发现最精彩的表演艺术
+        </p>
+    </div>
+
+    <!-- 筛选器 -->
+   <!-- 筛选器 -->
+<div class="filters-container" data-aos="fade-up" data-aos-delay="300">
+    <div class="filters">
+        <div class="filter-group">
+            <label class="filter-label">
+                <span class="filter-icon">🎭</span>
+                <select id="tag-filter" class="filter-select">
+                    <option value="all">所有类型</option>
+                    <option value="演唱会">演唱会</option>
+                    <option value="音乐会">音乐会</option>
+                    <option value="舞台剧">舞台剧</option>
+                    <option value="民俗活动">民俗活动</option>
+                    <option value="喜剧表演">喜剧表演</option>
+                    <option value="世界非遗">世界非遗</option>
+                    <option value="嘉年华">嘉年华</option>
+                    <option value="新春特演">新春特演</option>
+                </select>
+            </label>
+        </div>
+        
+        <div class="filter-group">
+            <label class="filter-label">
+                <span class="filter-icon">📍</span>
+                <select id="city-filter" class="filter-select">
+                    <option value="all">所有城市</option>
+                    <option value="汕头">汕头</option>
+                    <option value="佛山">佛山</option>
+                    <option value="珠海">珠海</option>
+                    <option value="深圳">深圳</option>
+                    <option value="广州">广州</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="filter-group">
+            <label class="filter-label">
+                <span class="filter-icon">📍</span>
+                <select id="district-filter" class="filter-select" disabled>
+                    <option value="all">所有区域</option>
+                </select>
+            </label>
+        </div>
+    </div>
+</div>
+
+
+    <!-- 内容区域 -->
+    <div class="content-wrapper">
+        <div class="conter">
+            <div id="activity-container"></div>
+        </div>
+    </div>
+
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" aria-label="返回顶部">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo" data-aos="fade-up">🏖️</div>
+            <p class="footer-text" data-aos="fade-up" data-aos-delay="100">版权所有 2025</p>
+        </div>
+    </footer>
+
+    <!-- 脚本 -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,           // 动画只播放一次
+            disable: 'mobile',    // 在移动设备上禁用
+            throttleDelay: 100,   // 增加节流延迟
+            debounceDelay: 50,    // 增加防抖延迟
+            offset: 100,          // 提前触发动画
+            duration: 500         // 减少动画时长
+        });
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>
